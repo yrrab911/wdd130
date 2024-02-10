@@ -1,0 +1,29 @@
+.circles {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: grey;
+}
+
+.desk, .graphic, .person {
+    border-radius: 50%;
+    width: 300px;
+    margin: 75px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 20px solid rgb(73, 73, 73);
+}
+
+.desk {
+    margin-left: 270px;
+}
+
+.desk:hover, .graphic:hover, .person:hover {
+    border: 20px solid white;
+    transform: scale(0);
+    -webkit-transition: 2s ease;
+    transition: 2s ease;
+}

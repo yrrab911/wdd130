@@ -11,6 +11,10 @@ header {
     font-family: sans-serif;
 }
 
+header:hover {
+    color: black;
+}
+
 img.education {
     max-width: 100%;
 }
