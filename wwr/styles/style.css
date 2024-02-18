@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+         
+
+
 body {
     background-color: white;
     font-size: 100%;
@@ -34,6 +41,11 @@ body {
 
 #logo_link {
     padding-top: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
 }
 
 nav a {
@@ -179,6 +191,12 @@ main section img {
 
 .logo {
     width: 80px;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
 }
 
 .icon {
