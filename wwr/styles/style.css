@@ -63,6 +63,8 @@ body {
 
 #logo_link {
     padding-top: 5px;
+    justify-self: center;
+    align-self: center;
 }
 
 nav {
@@ -182,15 +184,11 @@ img.logo {
     width: 100px;
 }
 
-.card-img,
-.mountains {
-    width: 100%;
-}
-
 .mountains {
     grid-column: 2/7;
     grid-row: 5/8;
     box-shadow: 5px 5px 10px #2B2118;
+    width: 100%;
 }
 
 .rivers-card {
@@ -234,6 +232,7 @@ img.card-img {
     border: 10px solid black;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #2B2118;
+    width: 100%;
 }
 
 .card-img:hover {
@@ -247,12 +246,6 @@ main section img {
 
 .logo {
     width: 80px;
-}
-
-#logo_link {
-    padding-top: 5px;
-    justify-self: center;
-    align-self: center;
 }
 
 .icon {
