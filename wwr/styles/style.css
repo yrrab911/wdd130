@@ -171,7 +171,7 @@ h4 {
 }
 
 
-p {
+#bottom_text {
     font-size: 1.5em;
     color: white;
 }
@@ -286,6 +286,28 @@ footer p a:hover {
 
 footer .social img {
     padding-top: 15px;
+}
+
+#grid_content {
+    display: grid;
+    grid-template-columns: repeat(3 * 1fr);
+    grid-template-rows: repeat(3 * 1fr);
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+#pic_1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#text_1 {
+    grid-column: 2/3;
+    grid-row: 1/2
+}
+
+#river_2, #river_1, #river_3 {
+    width: 1500px;
 }
 
 @media screen and (max-width: 900px) {
