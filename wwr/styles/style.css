@@ -290,8 +290,8 @@ footer .social img {
 
 #grid_content {
     display: grid;
-    grid-template-columns: repeat(3 * 1fr);
-    grid-template-rows: repeat(3 * 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     font-size: 25px;
     margin-top: 50px;
 }
