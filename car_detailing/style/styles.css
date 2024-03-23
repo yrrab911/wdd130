@@ -172,3 +172,24 @@ body {
     border-top: 1px solid;
     border-right: 1px solid;
   }
+
+  #home_info {
+    text-align: center;
+    font-family: var(--paragraph-font);
+    color: #ad8926;
+    font-size: 18px;
+  }
+  
+    #intro_comp {
+      font-family: var(--heading-font);
+      font-weight: bold;
+      color: #382400;
+      font-size: 24px;
+    }
+  
+    img#owner, img#clean_car {
+        width: 500px;
+        height: 500px;
+    }
+  
+  
