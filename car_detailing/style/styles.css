@@ -28,22 +28,21 @@ Fonts are separated by a | */
 
 #home_info {
   text-align: center;
-  font-family: 'Brush Script MT', Helvetica, sans-serif;
+  font-family: var(--paragraph-font);
   color: #ad8926;
   font-size: 18px;
 }
 
-#intro_comp {
-  font-family: 'Courier prime';
-  font-weight: bold;
-  color: #382400;
-  font-size: 24px;
-}
+  #intro_comp {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    color: #382400;
+    font-size: 24px;
+  }
 
-#home_imgs {
-  width: 550px;
-  display: inline-block;
-}
+  #home_imgs {
+    max-width: 550px;
+  }
 
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
