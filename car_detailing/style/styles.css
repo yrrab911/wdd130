@@ -26,6 +26,25 @@ Fonts are separated by a | */
   --nav-hover-background-color: #396E94;
 }
 
+#home_info {
+  text-align: center;
+  font-family: 'Brush Script MT', Helvetica, sans-serif;
+  color: #ad8926;
+  font-size: 18px;
+}
+
+#intro_comp {
+  font-family: 'Courier prime';
+  font-weight: bold;
+  color: #382400;
+  font-size: 24px;
+}
+
+#home_imgs {
+  width: 550px;
+  display: inline-block;
+}
+
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
 
