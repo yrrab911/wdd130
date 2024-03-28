@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
+
 <body>
     <div id="contents">
         <header>
@@ -21,20 +68,28 @@
         <h1 id="we_offer">
             [What We Offer,
             Exterior Detailing
-            Our exterior and interior detailing services are designed to enhance the appearance of your vehicle's exterior and interior, protect its paint, and restore its shine.
+            Our exterior and interior detailing services are designed to enhance the appearance of your vehicle's
+            exterior and interior, protect its paint, and restore its shine.
         </h1>
 
         <section id="exterior">
             <p>
                 Hand Washing: Gentle hand washing to remove dirt, grime, and contaminants from your vehicle's exterior.
-                Paint Correction: Removing imperfections such as swirl marks, scratches, and oxidation to restore your paint's finish.
-                Paint Protection: Applying a protective coating or sealant to protect your paint from the elements and maintain its shine.
-                Wheel and Tire Care: Cleaning and detailing your wheels and tires to enhance their appearance and protect them from damage.
+                Paint Correction: Removing imperfections such as swirl marks, scratches, and oxidation to restore your
+                paint's finish.
+                Paint Protection: Applying a protective coating or sealant to protect your paint from the elements and
+                maintain its shine.
+                Wheel and Tire Care: Cleaning and detailing your wheels and tires to enhance their appearance and
+                protect them from damage.
                 Interior Detailing.
-                Headlight Restoration: Restoring cloudy or yellowed headlights to improve visibility and enhance the appearance of your vehicle.
-                Ceramic Coating: Applying a ceramic coating to provide long-lasting protection and enhance the gloss and shine of your paint.
-                Convertible Top Care: Cleaning and conditioning convertible tops to protect them from the elements and maintain their appearance.
-                Engine Bay Detailing: Cleaning and detailing of the engine bay to remove dirt, grease, and grime and enhance the appearance of your engine.
+                Headlight Restoration: Restoring cloudy or yellowed headlights to improve visibility and enhance the
+                appearance of your vehicle.
+                Ceramic Coating: Applying a ceramic coating to provide long-lasting protection and enhance the gloss and
+                shine of your paint.
+                Convertible Top Care: Cleaning and conditioning convertible tops to protect them from the elements and
+                maintain their appearance.
+                Engine Bay Detailing: Cleaning and detailing of the engine bay to remove dirt, grease, and grime and
+                enhance the appearance of your engine.
             </p>
             <img src="img/outside_cleaning.jpg" alt="exterior">
         </section>
@@ -42,10 +97,14 @@
         <section id="interior">
             <img src="img/inside_cleaning.jpg" alt="interior">
             <p>
-                Vacuuming: Thorough vacuuming of carpets, upholstery, and floor mats to remove dirt, debris, and pet hair.
-                Interior Cleaning: Cleaning and conditioning of all interior surfaces, including dashboard, door panels, and seats, to remove stains and restore their appearance.
-                Odor Removal: Eliminating odors caused by spills, pets, or other sources to leave your car smelling fresh and clean.
-                Leather Care: Cleaning and conditioning of leather seats to restore their softness and prevent cracking and fading.
+                Vacuuming: Thorough vacuuming of carpets, upholstery, and floor mats to remove dirt, debris, and pet
+                hair.
+                Interior Cleaning: Cleaning and conditioning of all interior surfaces, including dashboard, door panels,
+                and seats, to remove stains and restore their appearance.
+                Odor Removal: Eliminating odors caused by spills, pets, or other sources to leave your car smelling
+                fresh and clean.
+                Leather Care: Cleaning and conditioning of leather seats to restore their softness and prevent cracking
+                and fading.
                 Additional Services.
             </p>
         </section>
@@ -53,16 +112,43 @@
             <p>Busted knuckles &copy; 2024 - Barry Leidy</p>
             <p><a class="the-plan" href="site_plan.html">Site Plan</a></p>
             <div class="social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="img/facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="img/twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="img/instagram.png" alt="instagram icon">
-                </a>
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="img/facebook.png" alt="fb icon">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="img/twitter.png" alt="twitter icon">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="img/instagram.png" alt="instagram icon">
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
         </footer>
     </div>
 </body>
+
 </html>

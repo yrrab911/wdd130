@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .dropbtn {
+        background-color: #3498DB;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
+
 <body>
     <div id="contents">
         <header>
@@ -23,8 +70,10 @@
         </h1>
         <section id="pricing">
             <p>
-                prices vary depending on services provided, state of car, make and model of car, and who is preforming the service. 
-                For all the info on pricing and services contact us through the phone number above or any of the social media link provided below.
+                prices vary depending on services provided, state of car, make and model of car, and who is preforming
+                the service.
+                For all the info on pricing and services contact us through the phone number above or any of the social
+                media link provided below.
             </p>
         </section>
         <img src="img/falling_money.jpg" alt="money">
@@ -33,16 +82,43 @@
             <p>Busted knuckles &copy; 2024 - Barry Leidy</p>
             <p><a class="the-plan" href="site_plan.html">Site Plan</a></p>
             <div class="social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="img/facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="img/twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="img/instagram.png" alt="instagram icon">
-                </a>
+                <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="img/facebook.png" alt="fb icon">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="img/twitter.png" alt="twitter icon">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img src="img/instagram.png" alt="instagram icon">
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                /* When the user clicks on the button, 
+                toggle between hiding and showing the dropdown content */
+                function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
+
+                // Close the dropdown if the user clicks outside of it
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            </script>
         </footer>
     </div>
 </body>
+
 </html>
