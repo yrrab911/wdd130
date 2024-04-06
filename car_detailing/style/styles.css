@@ -219,3 +219,39 @@ body {
     grid-row: 2/3;
     font-size: 28px;
   }
+
+  #content_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #phone {
+    font-size: 42px;
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+  #pricing {
+    font-size: 42px;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding-top: 250px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  img#money, img#happy {
+    width: 500px;
+  }
+
+  img#money {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  img#happy {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-top: 10px;
+  }
